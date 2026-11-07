@@ -1,0 +1,32 @@
+/* TicBird sitesi: oyunun paletinden (App/UI/Palette.swift). Yazı tipi sistemin; piksel yazı tipi yok. */
+:root {
+  --kagit: #FFFBF0; --murekkep: #13294B; --murekkep2: #3A4C6B; --turkuaz: #0E756C; --turkuaz-acik: #22B3A6;
+  --mercan: #C24117; --kum: #E9D3A3; --panel: #FFFFFF;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --kagit: #0F1C33; --murekkep: #F4EFE2; --murekkep2: #C7CFDD; --turkuaz: #5FD3C7; --turkuaz-acik: #22B3A6;
+          --mercan: #FF8A63; --kum: #3A4C6B; --panel: #16264A; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--kagit); color: var(--murekkep);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 32px 16px 48px; }
+header.ust { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+header.ust img { width: 72px; height: 72px; border-radius: 16px; }
+header.ust a { color: inherit; text-decoration: none; }
+h1 { font-size: 1.7rem; line-height: 1.2; margin: 0; }
+.alt { color: var(--murekkep2); margin: 2px 0 0; }
+h2 { font-size: 1.15rem; margin: 28px 0 6px; }
+p, li { color: var(--murekkep); }
+a { color: var(--turkuaz); }
+.panel { background: var(--panel); border: 2px solid var(--kum); border-radius: 14px; padding: 4px 18px 10px; margin: 18px 0; }
+.dugmeler { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.dugme { display: inline-block; padding: 10px 16px; border-radius: 12px; background: var(--turkuaz-acik); color: #13294B;
+         font-weight: 600; text-decoration: none; }
+.dugme.ikincil { background: transparent; border: 2px solid var(--turkuaz-acik); color: var(--murekkep); }
+.not { color: var(--murekkep2); font-size: 0.95rem; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--kum); color: var(--murekkep2); font-size: 0.9rem; }
+footer a { color: var(--murekkep2); }
